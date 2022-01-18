@@ -17,6 +17,7 @@ export default function Hero(props) {
       behavior: "smooth",
     });
   }
+  
   return (
     <Fade bottom>
       <section className="container pt-4">
@@ -46,7 +47,7 @@ export default function Hero(props) {
                 <img
                   width="36"
                   height="36"
-                  src={IconTraveler}
+                  src="/images/icon-traveler.svg"
                   alt={`${props.data.travelers} Travelers`}
                 />
                 <h6 className="mt-3">
@@ -60,8 +61,8 @@ export default function Hero(props) {
                 <img
                   width="36"
                   height="36"
-                  src={IconTreasure}
-                  alt={`${props.data.travelers} Travelers`}
+                  src="/images/icon-treasure.svg"
+                  alt={`${props.data.treasures} Treasures`}
                 />
                 <h6 className="mt-3">
                   {formatNumber(props.data.treasures)}{" "}
@@ -74,7 +75,7 @@ export default function Hero(props) {
                 <img
                   width="36"
                   height="36"
-                  src={IconCities}
+                  src="/images/icon-cities.svg"
                   alt={`${props.data.cities} Cities`}
                 />
                 <h6 className="mt-3">

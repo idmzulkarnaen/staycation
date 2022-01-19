@@ -43,7 +43,7 @@ class Checkout extends Component {
 
   render() {
     const { data } = this.state;
-    const { checkout} = this.props;
+    const { checkout, page } = this.props;
 
     if (!checkout)
       return (
@@ -69,6 +69,8 @@ class Checkout extends Component {
         </div>
       );
 
+
+
     const steps = {
       bookingInformation: {
         title: "Booking Information",
@@ -77,7 +79,7 @@ class Checkout extends Component {
           <BookingInformation
             data={data}
             checkout={checkout}
-            ItemDetails={ItemDetails}
+            ItemDetails={page[checkout._id]}
             onChange={this.onChange}
           />
         ),
@@ -88,7 +90,7 @@ class Checkout extends Component {
         content: (
           <Payment
             data={data}
-            ItemDetails={ItemDetails}
+            ItemDetails={page[checkout._id]}
             checkout={checkout}
             onChange={this.onChange}
           />
